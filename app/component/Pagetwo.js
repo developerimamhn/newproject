@@ -245,11 +245,12 @@ const Pagetwo = () => {
                         </svg>
                     </div>
                 </div>
-                  <div className='grid grid-cols-1 sm:grid-cols-2 items-start justify-start'>
-                      <div className="TradeLikeAProWithXonicCapital text-center sm:text-start text-[35px] sm:text-[40px] md:text-[55px] lg:text-[65px] xl:text-[80px] 2xl:text-[100px] flex sm:items-start  items-center justify-start relative lg:flex-row flex-col !leading-[170%]">
+                  <div className='grid grid-cols-1 sm:grid-cols-12 items-start justify-start'>
+                      <div className="col-span-4 TradeLikeAProWithXonicCapital text-center sm:text-start text-[35px] sm:text-[40px] md:text-[55px] lg:text-[65px] xl:text-[80px] 2xl:text-[100px] flex sm:items-start  items-center justify-start relative lg:flex-row flex-col !leading-[170%]">
                         instantly
                       </div>
-                    <p className='dividwallet text-[11px] sm:text-[15px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[32px] py-[20px] sm:py-[24px] md:py-[32px] lg:py-[36px] xl:py-[40px] 2xl:py-[48px] sm:text-left text-center'>Earning crypto rewards easily with Divi Wallet. Our proprietary <br className='sm:block hidden'/>
+                      <p className='col-span-1'></p>
+                    <p className='col-span-7 dividwallet text-[16px] sm:text-[20px] md:text-[24px] lg:text-[32px] xl:text-[36px] 2xl:text-[42px] py-[20px] sm:py-[24px] md:py-[32px] lg:py-[36px] xl:py-[40px] 2xl:py-[48px] sm:text-left text-center'>Earning crypto rewards easily with Divi Wallet. Our proprietary <br className='sm:block hidden'/>
                     Got Bitcoin but want Ethereum? Instantly swap between your favourite tokens, without leaving the wallet. Seamless conversions get you the currency you need in minutes.</p>
                   </div>
                 </div>

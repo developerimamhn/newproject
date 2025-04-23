@@ -34,6 +34,27 @@ body {
 
 
 @layer utilities{
+  .featuredescription{
+    color: #F3E2FF;
+    font-family: "Neue Power Trial";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 28.8px */
+  }
+  .featuretitle{
+    color: #F3E2FF;
+    font-family: "Neue Power Trial";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%; /* 42px */
+  }
+  .dontmissing{
+    color: #F3E2FF;
+    font-family: "Neue Power Trial";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 42px */
+  }
   .readdividinaga{
     color: #E5C1FF;
     font-family: "Neue Power Trial";
@@ -43,12 +64,13 @@ body {
     background: var(--gfxdsdgh, #1E53FF);
   }
   .dividwallet{
-    color: #E5C1FF;
+    color: #813C9B;
     font-family: "Neue Power Trial";
+    font-size: 42px;
     font-style: normal;
-    font-weight: 700;
-    line-height: 170%; /* 54.4px */
-    letter-spacing: 1.6px;
+    font-weight: 600;
+    line-height: 170%; /* 71.4px */
+    letter-spacing: 2.1px;
   }
   .selfcountopdia{
     color: #F3E2FF;
