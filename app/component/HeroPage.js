@@ -160,7 +160,7 @@ const HeroPage = () => {
 
 
     return (
-        <div ref={buttonRef} className='relative'>
+        <div id="hero" ref={buttonRef} className='relative'>
           <div className='relative z-[2] overflow-hidden'>
             <div className='pt-[100px] sm:pt-[90px] md:pt-[110px] lg:pt-[140px] xl:pt-[180px] 2xl:pt-[220px] sm:pb-0 pb-[50px] container mx-auto px-[24px] sm:px-0 w-full'>
                 <div  className='flex items-center justify-center sm:flex-row flex-col'>

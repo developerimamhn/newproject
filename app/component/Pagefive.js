@@ -8,67 +8,11 @@ gsap.registerPlugin(ScrollTrigger);
 import Image from 'next/image';
 
 
-const faqs = [
-  {
-    id: 1,
-    question: "Where can I find more documentation?",
-    answer:
-      "The best place to start is Digi-ID.io. If you want to know more about the details and advantages of Digi-ID, you can refer to the user guide, vendor guide or integration guide. If you are looking for the media kit, please get the intro sheet and logos.",
-  },
-  {
-    id: 2,
-    question: "How do I participate in staking?",
-    answer:
-      "Staking is incredibly simple! Just link your wallet in the staking section, and then choose the amount you wish to stake.",
-  },
-  {
-    id: 3,
-    question: "When does the PRESALE end?",
-    answer:
-      "The presale will conclude once the target funding is reached or when we officially announce its end. Rest assured, you'll get all the latest updates and key information through our Telegram and X (formerly Twitter) channels. Don't wait too long - secure your place in this exciting project before it's too late!",
-  },
-  {
-    id: 4,
-    question: "On which exchange will the launch take place?",
-    answer:
-      "The launch will take place on Rydium, and you can track the progress and price on platforms like Dextool or Dexscreener. Be sure to follow along as the excitement builds - this is a launch you how not want to miss!",
-  },
-  {
-    id: 5,
-    question: "What's next for $EXTAI?",
-    answer:
-      "$EXTAI isn't just about the present - it's about shaping the future. As a holder, you'll gain access to exclusive insights collected by our AI agent, revealing valuable information that will influence the development of both blockchain and AI technologies. Our goal is to build a thriving community while pushing the limits of what's possible with these technologies. Join us in this journey into the future!",
-  },
-];
 
 
 
 
 const Pagefive = () => {
-    const [openFaq, setOpenFaq] = useState(faqs[0].id); // First item always open
-
-  const toggleFaq = (id) => {
-    setOpenFaq((prev) => (prev === id ? null : id)); // Always keeps one open
-  };
-
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-          gsap.from(".section7", {
-            y: 100,
-            duration: 2,
-            scrollTrigger: {
-              trigger: ".section7",
-              start: 'top 85%',
-              end: 'top 40%',
-              scrub: 2,
-            },
-          });
-        });
-      
-        ScrollTrigger.refresh();
-        return () => ctx.revert();
-      }, []);
-
 
 
 
@@ -103,42 +47,26 @@ const Pagefive = () => {
             );
           });
         }, []);
-    return (
-        <div id='Community' className='section7 relative -mt-[1]'>
-          <div className='voerflow w-full h-full absolute top-0 left-0 z-[-2]' ></div>
-          
-            <div className='px-[24px] sm:px-0 container mx-auto pb-[32px] sm:pb-[36px] md:pb-[40px] lg:pb-[48px] xl:pb-[64px] 2xl:pb-[80px]'>
-                <div className='relative mt-[40px] sm:mt-[40px] md:mt-[50px] lg:mt-[66px] xl:mt-[80px] 2xl:mt-[100px] pb-[32px] sm:pb-[36px] md:pb-[40px] lg:pb-[48px] xl:pb-[64px] 2xl:pb-[73px]'>
-                    <h2 className='howtobue text-[28px] sm:text-[32px] md:text-[38px] lg:text-[42px] xl:text-[50px] 2xl:text-[60px] figtree'>Frequently Asked Questions</h2>
-                </div>
-                <div className='mt-[32px] sm:mt-[36px] md:mt-[40px] lg:mt-[46px] xl:mt-[60px] 2xl:mt-[80px]'>
-                    <div className='flex flex-col justify-center items-center '>
-                    <div className="w-full flex flex-col gap-[20px] sm:gap-[24px] md:gap-[28px] lg:gap-[32px] xl:gap-[36px] 2xl:gap-[40px]">
 
-                    {faqs.map((faq, index) => (
-                        <div key={faq.id} ref={(el) => (itemRefs.current[index] = el)}  className="benifitsepepe pb-[13px] sm:pb-[14px] md:pb-[15px] lg:pb-[16px] xl:pb-[20px] 2xl:pb-[24px] w-full border-b-[1px] border-[#1F1C29]">
-                        <div onClick={() => toggleFaq(faq.id)} className="flex items-center justify-between w-full cursor-pointer">
-                            <div className="whatisextass text-[15px] sm:text-[16px] md:text-[20px] lg:text-[24px] xl:text-[28px] 2xl:text-[30px] figtree">
-                            {faq.question}
-                            </div>
-                            <div  className="group cursor-pointer">
-                            <svg className={`w-[20px] sm:w-[24px] md:w-[32px] lg:w-[36px] xl:w-[40px] 2xl:w-[46px] cursor-pointer transition-transform duration-300 ${
-                                openFaq === faq.id ? "rotate-180" : "rotate-0"
-                                }`}  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M19.9201 8.94995L13.4001 15.47C12.6301 16.24 11.3701 16.24 10.6001 15.47L4.08008 8.94995" stroke="#B4B3B7" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            </div>
-                        </div>
-                        {openFaq === faq.id && (
-                            <p className="extasiscuting text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] pt-[13px] sm:pt-[14px] md:pt-[15px] lg:pt-[16px] xl:pt-[20px] 2xl:pt-[24px] sm:w-[70%] figtree">
-                            {faq.answer}
-                            </p>
-                        )}
-                        </div>
-                    ))}
-                    </div>
-                    </div>
+    return (
+        <div id='Support' className='section7 relative -mt-[1] pb-[50px] sm:pb-[60px] md:pb-[70px] lg:pb-[90px] xl:pb-[120px] 2xl:pb-[150px]'>
+          <div className='container mx-auto' >
+              <div className='py-[32px] sm:py-[36px] md:py-[40px] lg:py-[48px] xl:py-[64px] 2xl:py-[80px] bg-[#9226E0]'>
+                <h2 className='sta7i09w text-[32px] sm:text-[36px] md:text-[40px] lg:text-[48px] xl:text-[64px] 2xl:text-[99px] text-center'>Stay in the know</h2>
+              </div>
+              <div className='grid grid-cols-1 sm:grid-cols-2'>
+                <div className='signandpage py-[32px] sm:py-[36px] md:py-[40px] lg:py-[48px] xl:py-[64px] 2xl:py-[73px] px-[24px] sm:px-[32px] md:px-[36px] lg:px-[40px] xl:px-[48px] 2xl:px-[68px]'>
+                  <p className='signpuptatg text-[16px] sm:text-[20px] md:text-[24px] lg:text-[32px] xl:text-[36px] 2xl:text-[42px] text-center sm:text-start '>Sign up to our mailing list to receive the latest wallet news, features updates, and more importantly, giveaways.</p>
                 </div>
+                <div className='singpupagelogin flex items-center justify-center py-[32px] sm:py-[36px] md:py-[40px] lg:py-[48px] xl:py-[64px] 2xl:py-[73px] px-[24px] sm:px-[32px] md:px-[36px] lg:px-[40px] xl:px-[48px] 2xl:px-[68px]'>
+                  <div className='singpuinput flex items-center justify-between px-[20px] sm:px-[24px] md:px-[32px] lg:px-[36px] xl:px-[40px] 2xl:px-[50px]'>
+                    <input type='gmail' placeholder='Enter your mail' className='inpuitiname text-[15px] sm:text-[16px] md:text-[20px] lg:text-[24px] xl:text-[32px] 2xl:text-[35px] w-8/10 outline-none'/>
+                    <svg xmlns="http://www.w3.org/2000/svg" className='cursor-pointer w-[20px] sm:w-[24px] md:w-[32px] lg:w-[36px] xl:w-[40px] !2xl:w-[44px]' viewBox="0 0 44 36" fill="none">
+                    <path d="M24.843 0.0889359C24.4215 0.249733 24.0258 0.571323 23.0796 1.52762C22.0473 2.55163 21.8065 3.03401 21.8667 3.90569C21.8925 4.29498 21.9785 4.64195 22.0989 4.88737C22.2366 5.14972 23.7161 6.66457 26.9935 9.89738L31.6903 14.535L16.7742 14.552L1.84946 14.5773L1.41935 14.772C0.860215 15.0259 0.455914 15.4067 0.206452 15.9314C0.0172043 16.3291 0 16.4476 0 17.9709V19.5873L0.266667 20.1036C0.541936 20.6452 0.946237 21.0345 1.52258 21.2884C1.83226 21.4238 2.82151 21.4322 16.8172 21.4576L31.7763 21.4746L26.9505 26.2391C21.6344 31.4777 21.8495 31.2322 21.8495 32.307C21.8495 33.0856 22.1849 33.6272 23.3376 34.7358C23.871 35.2521 24.4387 35.7429 24.6022 35.8276C25.0237 36.0561 26.4086 36.0561 26.8387 35.836C27.2516 35.616 43.4753 19.6635 43.7677 19.1896C43.9742 18.8511 44 18.7241 44 18.0048C44 17.387 43.9656 17.1331 43.8452 16.9046C43.6215 16.4984 27.4065 0.529007 26.9333 0.249733C26.6237 0.07201 26.4258 0.0296974 25.8581 0.00431061C25.4108 -0.0126152 25.0495 0.0212364 24.843 0.0889359Z" fill="#F3E2FF"/>
+                  </svg>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
     );

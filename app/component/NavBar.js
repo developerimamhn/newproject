@@ -79,6 +79,18 @@ const NavBar = () => {
         };
     }, [prevScrollPos]);
 
+    const handleScrollToTop   = (e, targetId) => {
+        e.preventDefault();
+        if (targetId === "") {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          const element = document.getElementById(targetId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      };
+      
 
     return (
         <div className={` header ${scrolled ? "scrolled" : " "}  w-full header backgronsdvg  ${
@@ -102,7 +114,7 @@ const NavBar = () => {
                         <LiaBarsSolid className='text-white text-[24px] absolute' />
                     </div>
                 </div>
-                <Link href='/' className='cursor-pointer flex items-center Froggo-Logo h-[20px] sm:h-[24px] 2xl:h-[28px]' onClick={(e) => handleScroll(e, "")}>
+                <Link onClick={(e) => handleScrollToTop(e, "")} href='/' className='cursor-pointer flex items-center Froggo-Logo h-[20px] sm:h-[24px] 2xl:h-[28px]'>
                 <Image className='w-full h-[24px] sm:h-[28px] 2xl:h-[31px]' src={logo} alt=''/></Link> 
                 <div clssName="navbar-items-mainbackground">
                 <nav ref={menuRef} className={`navbar-items-main absolute sm:top-0 top-[100%] sm:left-0 sm:relative duration-1000 z-[999] sm:opacity-100 flex justif-start sm:justify-between items-start sm:items-center gap-[14px] md:gap-[16px] sm:gap-[18px] xl:gap-[20px] 2xl:gap-[22px] md:p-[12px] xl:p-[16px] sm:bg-transparent bg-[#FBC4C5] sm:flex-row flex-col p-[20px] sm:p-[0] w-full h-screen sm:h-full
